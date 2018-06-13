@@ -15,13 +15,15 @@ public class ClientThreadReceiver extends ClientThread {
 	void parse() throws IOException {
 		while ((inputData = in.readLine()) != null) {
 			//コマンドの判定
+			/*
 			if(inputData.matches("command=.+")) {
 				if(inputData.equals("command=exit")) {
 					break;
 				}
 			}else {
 				out.println(inputData);
-			}
+			}*/
+			out.println(inputData);
 		}
 	}
 

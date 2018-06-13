@@ -16,6 +16,7 @@ public class ClientThreadSender extends ClientThread {
 
 	void parse() throws IOException {
 		while ((inputData = in.readLine()) != null) {
+			/*
 			if (inputData.equals("!exit")) {
 				out.println("command=exit");
 				break;
@@ -30,6 +31,8 @@ public class ClientThreadSender extends ClientThread {
 			} else {
 				out.println("message=" + inputData);
 			}
+			*/
+			out.println(inputData);
 		}
 	}
 

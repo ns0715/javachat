@@ -23,11 +23,14 @@ public class ServerThread extends Thread {
 		try {
 			String inputData = null;
 			//名前情報の取得
+			/*
 			inputData = in.readLine();
 			clientName = Pattern.compile("command=name=").matcher(inputData).replaceFirst("");
 			Server.sendAll("[Server]: " + clientName + " has joined.");
+			*/
 			//入力を1行読み込んで出力
 			while((inputData = in.readLine()) != null) {
+				/*
 				if(inputData.matches("command=.+")) {
 					if(inputData.equals("command=exit")) {
 						send("command=exit");
@@ -40,9 +43,11 @@ public class ServerThread extends Thread {
 					Server.sendAll("[" + clientName + "] : " + Pattern.compile("message=").matcher(inputData).replaceFirst(""));
 				}
 				//Server.sendAll("[" + threadID + "]" + clientName + ": " + inputData);		//受け取った入力をServerクラスに返してからsendAllメソッドで全クライアントに送信
+				*/
+				Server.sendAll(inputData);
 				
 			}
-			Server.remove(this);
+			//Server.remove(this);
 		}catch (Exception e) {
 			e.printStackTrace();
 		}finally {

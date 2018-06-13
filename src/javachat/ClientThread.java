@@ -20,7 +20,7 @@ public abstract class ClientThread extends Thread {
 	public void run(){
 		try {
 			//初期化
-			init();
+			//init();
 			//入力を1行読み込んで出力
 			parse();
 			//exitコマンドが入力されるまでループを続行
