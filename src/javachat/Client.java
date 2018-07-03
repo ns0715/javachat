@@ -49,7 +49,7 @@ public class Client {
 		}catch (IOException ioe) {
 			ioe.printStackTrace();
 		}finally {
-			System.out.println("closing...");
+			//System.out.println("closing...");
 			socket.close();
 		}
 	}

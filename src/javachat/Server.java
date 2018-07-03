@@ -32,15 +32,6 @@ public class Server {
 					newthread = new ServerThread (num_member, socket);
 					threadList.add(newthread);
 					log.println("Thread " + num_member + " created.");
-					/*
-					for (ServerThread th : threadList) {
-						// スレッドの開始
-						if (th.threadID == num_member) {
-							th.start();
-							// log.println("Thread " + num_member + " started.");
-							break;
-						}
-					}*/
 					newthread.start();
 				} catch (IOException ioe) {
 					ioe.printStackTrace();
@@ -68,7 +59,7 @@ public class Server {
 
 	public static void remove(ServerThread left) {
 		threadList.remove(left); // 退出したクライアントと通信していたスレッドをリストから削除
-		sendAll("[Server]: " + left.clientName + " has left the room.");
+		//sendAll("[Server]: " + left.clientName + " has left the room.");
 	}
 
 }

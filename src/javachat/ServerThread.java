@@ -2,7 +2,6 @@ package javachat;
 
 import java.io.*;
 import java.net.*;
-import java.util.regex.*;
 
 public class ServerThread extends Thread {
 	
@@ -47,7 +46,7 @@ public class ServerThread extends Thread {
 				Server.sendAll(inputData);
 				
 			}
-			//Server.remove(this);
+			Server.remove(this);
 		}catch (Exception e) {
 			e.printStackTrace();
 		}finally {

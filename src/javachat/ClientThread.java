@@ -27,15 +27,7 @@ public abstract class ClientThread extends Thread {
 		}catch (IOException ioe) {
 			ioe.printStackTrace();
 		}finally {
-			/*
-			try {
-				in.close();
-				out.close();
-			}catch (IOException ioe) {
-				ioe.printStackTrace();
-			}finally {
-				
-			}*/
+			
 		}
 		
 	}
