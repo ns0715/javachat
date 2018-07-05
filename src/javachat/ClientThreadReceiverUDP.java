@@ -27,6 +27,7 @@ public class ClientThreadReceiverUDP extends ClientThread {
 				byte[] buffer = new byte[128];
 				dp = new DatagramPacket(buffer, buffer.length);
 				ds = new DatagramSocket(PORT);
+				ds.setReuseAddress(true);
 				ds.receive(dp);
 				String str = new String(dp.getData());
 				out.println(str);

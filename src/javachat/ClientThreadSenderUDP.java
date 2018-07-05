@@ -26,6 +26,7 @@ public class ClientThreadSenderUDP extends ClientThread {
 				byte[] buffer = inputData.getBytes();
 				dp = new DatagramPacket(buffer, buffer.length, addr, PORT);
 				ds = new DatagramSocket();
+				ds.setReuseAddress(true);
 				ds.send(dp);
 				ds.close();
 			}

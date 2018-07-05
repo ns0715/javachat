@@ -44,6 +44,7 @@ public class ServerUDP {
 			for(InetAddress addr : addressList) {
 				dp = new DatagramPacket(inputData, inputData.length, addr, PORT + 1);
 				ds = new DatagramSocket();
+				ds.setReuseAddress(true);
 				ds.send(dp);
 				ds.close();
 			}
